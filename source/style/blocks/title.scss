@@ -1,0 +1,31 @@
+.title {
+  position: relative;
+  z-index: 2;
+  @include inline-block(middle);
+  padding: 45px 80px;
+  background-position: center 15px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-align: center;
+  font-size: 63px;
+  color: $black-blue;
+  @include font-bernier(Regular);
+
+  &:after {
+    content: "";
+    @include centered(y);
+    left: 40px;
+    width: 20px;
+    height: 5px;
+    background-color: rgba(#343434, .2);
+  }
+
+  &:before {
+    content: "";
+    @include centered(y);
+    right: 40px;
+    width: 20px;
+    height: 5px;
+    background-color: rgba(#343434, .2);
+  }
+}

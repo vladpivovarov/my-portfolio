@@ -1,0 +1,38 @@
+.says {
+  text-align: center;
+  background: url(../img/water-bg.png);
+  background-size: cover;
+  backdrop-filter: grayscale(1) contrast(3) blur(1px);
+}
+
+.says__section-title {
+  @include inline-block(middle);
+  max-width: 500px;
+  line-height: 1.1;
+}
+
+.says__quotes {
+  margin-bottom: 70px;
+  font-size: 0px;
+}
+
+.says__mess {
+  @include inline-block(middle);
+}
+
+.says__arrow-block {
+  padding: 115px 0 70px 0;
+  text-align: center;
+}
+
+.says__down-arrow {
+  width: 46px;
+  height: 26px;
+  padding: 1gulp0px;
+  @include inline-block(middle);
+
+  & .down-arrow__svg {
+    transform: rotate(180deg);
+  }
+}
+

@@ -1,0 +1,79 @@
+extends ../_template
+
+block variables
+	- var title = 'Work page'
+
+block content
+	section.section.hero.hero-blog
+		.hero__bg
+			img(src="assets/img/mountains.jpg", alt="").hero__bg-img
+		ul.hero__socials.socials
+			each item in ["vk", "github", "in"]
+				li.socials__item
+					a(href="/").socials__link
+						svg(class=`svg socials__svg socials__svg_${item}`)
+							use(xlink:href=`assets/img/sprite.svg#${item}`)
+		a(href="/").hero__hamburger.hamburger
+			svg.svg.hamburger__svg
+				use(xlink:href="assets/img/sprite.svg#hamburger")
+		.hero__title
+			img(src='assets/img/blog-header.png').section-title.hero-blog-title
+			.user.hero__user-block
+				.user__photo
+					img(src="assets/img/my-photo-circle.png").hero-img
+				+title("Блог", "", "hero__blog-title")
+				.user__desc
+					| Статьи, которые я написал
+	section.section.blog
+		.blog__title
+			.blog__title-top
+				.title-top__left
+					svg(viewBox="0 0 590 109" preserveAspectRatio="none").triangle.blog__triangle
+						polygon(points="0,0 590,109 0,109 0,0")
+				.title-top__right
+					svg(viewBox="0 0 590 109" preserveAspectRatio="none").triangle.blog__triangle
+						polygon(points="0,109 590,0 590,109 0,109")
+		.blog__body
+			.blog-menu
+				ul.blog-menu__list
+					- for(var i = 0; i < 3; i++)
+						li.blog-menu__item
+							a(href=`${blogMenu.link[i]} ` class= `blog-menu__link blog-menu__link_${blogMenu.class[i]} `) #{blogMenu.title[i]}
+			.blog-content
+				.blog-content__article
+					h1 Самое важное в SASS
+					time  21.05.17
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ea atque ullam quod sed nostrum reiciendis, iusto cupiditate quibusdam quaerat!
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium laudantium excepturi esse quasi obcaecati, repellat recusandae harum alias ea reiciendis ex dolorem placeat quibusdam nesciunt ratione ad, repellendus, accusamus quaerat! Tempore ullam consequatur qui expedita corporis blanditiis dicta ut fugiat! Tempora, reiciendis, est! Aut amet ipsum fugit, ut consectetur dolorum!
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi ad earum mollitia similique officiis voluptates impedit tempore animi? Iusto numquam vel consequatur veritatis, sint consequuntur incidunt saepe reiciendis velit molestiae recusandae itaque neque dolorem qui provident labore sapiente quasi tenetur.
+				.blog-content__article
+					h1 Cамый необходимый набор GULP плагинов
+					time  21.05.17
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ea atque ullam quod sed nostrum reiciendis, iusto cupiditate quibusdam quaerat!
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium laudantium excepturi esse quasi obcaecati, repellat recusandae harum alias ea reiciendis ex dolorem placeat quibusdam nesciunt ratione ad, repellendus, accusamus quaerat! Tempore ullam consequatur qui expedita corporis blanditiis dicta ut fugiat! Tempora, reiciendis, est! Aut amet ipsum fugit, ut consectetur dolorum!
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi ad earum mollitia similique officiis voluptates impedit tempore animi? Iusto numquam vel consequatur veritatis, sint consequuntur incidunt saepe reiciendis velit molestiae recusandae itaque neque dolorem qui provident labore sapiente quasi tenetur.
+				.blog-content__article
+					h1 Почему я выбрал Jade
+					time  21.05.17
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ea atque ullam quod sed nostrum reiciendis, iusto cupiditate quibusdam quaerat!
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium laudantium excepturi esse quasi obcaecati, repellat recusandae harum alias ea reiciendis ex dolorem placeat quibusdam nesciunt ratione ad, repellendus, accusamus quaerat! Tempore ullam consequatur qui expedita corporis blanditiis dicta ut fugiat! Tempora, reiciendis, est! Aut amet ipsum fugit, ut consectetur dolorum!
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi ad earum mollitia similique officiis voluptates impedit tempore animi? Iusto numquam vel consequatur veritatis, sint consequuntur incidunt saepe reiciendis velit molestiae recusandae itaque neque dolorem qui provident labore sapiente quasi tenetur.		
+		footer.footer.blog__footer
+			.footer__row
+				.footer__left
+					ul.footer-menu__list
+						- for(var i = 0; i < 4; i++)
+							li.footer-menu__item
+								a(href=`${menu.link[i]}`).footer-menu__link= menu.title[i]
+				.footer__right
+					ul.footer__socials-list.socials
+						each item in ["vk", "github", "in"]
+							li.socials__item
+								a(href="/").socials__link.socials__link_footer
+									svg(class=`svg socials__svg socials__svg_${item} socials__svg_footer` viewbox="0 0 100 100")
+										use(xlink:href=`assets/img/sprite.svg#${item}`)
+			.footer__row
+				.footer__left
+					p= footer.left
+				.footer__right
+					p= footer.right

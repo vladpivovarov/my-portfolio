@@ -1,0 +1,13 @@
+.down-arrow {
+  display: block;
+  width: 26px;
+  height: 16px;
+}
+
+.down-arrow__svg {
+  fill: rgba(#fff, .7);
+
+  &:hover {
+    fill: rgba(#fff, .9);
+  }
+}

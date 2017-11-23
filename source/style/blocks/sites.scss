@@ -1,0 +1,24 @@
+.sites {
+  @extend %clearfix;
+}
+
+.sites__left, .sites__right {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+.sites__left{
+  float: left;
+  background: $light-silver;
+  padding: 90px;
+}
+
+.sites__site {
+  @include centered(both);
+}
+
+.sites__right{
+  float: right;
+  background: $beige;
+}

@@ -1,0 +1,88 @@
+.mess {
+  position: relative;
+  padding-top: 25px;
+  border-radius: 5px 5px 0 0;
+  max-width: 380px;
+  min-height: 390px;
+  background: rgba(#fff, .5);
+}
+
+.mess__subtitle {
+  z-index: 1;
+  margin-bottom: 30px;
+}
+
+.mess__input-block {
+  padding: 0 20px;
+}
+
+.mess__input {
+  width: 100%;
+  margin-bottom: 25px;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 5px;
+  font-size: 16px;
+  color: $black-blue;
+
+  &::-webkit-input-placeholder {
+    color: rgba($black-blue, .5);
+  }
+
+  &::-moz-placeholder {
+    color: rgba($black-blue, .5);
+  }
+
+  &:-ms-input-placeholder {
+    color: rgba($black-blue, .5);
+  }
+}
+
+.mess__textarea {
+  width: 100% !important;
+  height: 140px;
+  resize: none;
+  margin-bottom: 25px;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 5px;
+  font-size: 16px;
+  color: $black-blue;
+
+  &::-webkit-input-placeholder {
+    color: rgba($black-blue, .5);
+  }
+
+  &::-moz-placeholder {
+    color: rgba($black-blue, .5);
+  }
+
+  &:-ms-input-placeholder {
+    color: rgba($black-blue, .5);
+  }
+}
+
+.mess__buttons {
+  position: absolute;
+  top: 100%;
+  left:0%;
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+  overflow: hidden;
+  font-size: 0;
+}
+
+.mess__buttons-send, .mess__buttons-clear {
+  @include inline-block(middle);
+  width: 50%;
+  padding: 10px 0;
+  border-right: 1px solid rgba(#fff, .5);
+  background-color: $blue;
+  text-align: center;
+  font-size: 16px;
+  color: $white;
+  
+  &:hover {
+    background: #268c8b;
+  }
+}

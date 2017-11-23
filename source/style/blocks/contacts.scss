@@ -1,0 +1,36 @@
+
+.contacts {
+  padding: 40px;
+  background: rgba(#fff, .85);
+  text-align: center;
+  border-radius: 5px;
+}
+
+.contacts__subtitle {
+  margin-bottom: 30px;
+}
+
+.contacts__contact-item {
+  display: block;
+  margin-bottom: 20px;
+  text-align: left;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.contact-svg, .contact-info {
+  @include inline-block(middle);
+}
+
+.contact-svg {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  fill: $blue;
+}
+
+.contact-info {
+  font-size: 16px;
+}

@@ -1,0 +1,115 @@
+extends ../_template
+block variables
+	- var title = 'Work page'
+
+block content
+	section.section.hero
+		.hero__bg
+			img(src="assets/img/mountains.jpg", alt="").hero__bg-img
+		ul.hero__socials.socials
+			each item in ["vk", "github", "in"]
+				li.socials__item
+					a(href="/").socials__link
+						svg(class=`svg socials__svg socials__svg_${item}`)
+							use(xlink:href=`assets/img/sprite.svg#${item}`)
+		a(href="/").hero__hamburger.hamburger
+			svg.svg.hamburger__svg
+				use(xlink:href="assets/img/sprite.svg#hamburger")
+		a(href="/").hero__down-arrow.down-arrow
+			svg.svg.down-arrow__svg
+				use(xlink:href="assets/img/sprite.svg#arrow_down")
+		.hero__title
+			img(src='assets/img/portfolio_header.png').section-title
+			.user.hero__user-block
+				.user__photo
+					img(src="assets/img/my-photo-circle.png").hero-img
+				.user__name
+					| Владислав Пивоваров
+				.user__desc
+					| Личный сайт веб разработчика
+	section.section.works
+		.works__title
+			.works__title-top
+				.title-top__left
+					svg(viewBox="0 0 590 109" preserveAspectRatio="none").triangle.works__triangle
+						polygon(points="0,0 590,109 0,109 0,0")
+				.title-top__right
+					svg(viewBox="0 0 590 109" preserveAspectRatio="none").triangle.works__triangle
+						polygon(points="0,109 590,0 590,109 0,109")
+			.works__title-body
+				+title("Мои работы", "works-header.png", "works__section-title")
+		.sites.works__sites
+			.sites__left
+				.site.sites__site
+					.site__subtitle
+						.subtitle Сайт школы онлайн образования
+					.site__tehnology
+						| HTML , CSS, JAVASCRIPT
+					a(href="/").site__link
+						.site__link-icon
+							svg.link-svg
+								use(xlink:href="assets/img/sprite.svg#link")
+						.site__link-text Посмотреть сайт
+			.sites__right
+				.slideshow.sites__slideshow
+					.slideshow__main
+						img(src="assets/img/work-1.png").main__slide
+					.slideshow__sub
+						.sub__left
+							.top.top-slide-up
+								a(href="/").top__arrow.down-arrow
+									svg.svg.down-arrow__svg
+										use(xlink:href="assets/img/sprite.svg#arrow_down")
+							img(src="assets/img/work-2.png").left__slide
+						.sub__right
+							.top.top-slide-down
+								a(href="/").top__arrow.up-arrow
+									svg.svg.down-arrow__svg
+										use(xlink:href="assets/img/sprite.svg#arrow_down")
+							img(src="assets/img/work-3.png").right__slide
+	section.section.says
+		+title("Что обо мне говорят", 'about-header.png', "says__section-title")
+		.says__quotes
+			- for (var i = 0; i < 2; i++)
+				.quote
+					.quote__textr
+						p= quotes[i].quote
+					.quote__author
+						.quote__author-photo
+							img(src=`${quotes[i].photo}`).author-photo__img
+						.quote__author-title
+							.author-title__name= quotes[i].name
+							.author-title__prof= quotes[i].prof
+		form.says__mess.mess
+			.mess__subtitle.subtitle Связаться со мной
+			.mess__input-block
+				input(type="text" placeholder="Имя").mess__input
+				input(type="text" placeholder="Email").mess__input
+				textarea(placeholder="Ваше сообщение").mess__textarea
+			.mess__buttons
+				a(href="/").mess__buttons-send Отправить
+				a(href="/").mess__buttons-clear Очистить
+		.says__arrow-block
+			a(href="/").says__down-arrow.down-arrow
+				svg.svg.down-arrow__svg
+					use(xlink:href="assets/img/sprite.svg#arrow_down")
+		footer.footer.says__footer
+			.footer__row
+				.footer__left
+					ul.footer-menu__list
+						- for(var i = 0; i < 4; i++)
+							li.footer-menu__item
+								a(href=`${menu.link[i]}`).footer-menu__link= menu.title[i]
+				.footer__right
+					ul.footer__socials-list.socials
+						each item in ["vk", "github", "in"]
+							li.socials__item
+								a(href="/").socials__link.socials__link_footer
+									svg(class=`svg socials__svg socials__svg_${item} socials__svg_footer` viewbox="0 0 100 100")
+										use(xlink:href=`assets/img/sprite.svg#${item}`)
+			.footer__row
+				.footer__left
+					p= footer.left
+				.footer__right
+					p= footer.right
+

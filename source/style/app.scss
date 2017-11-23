@@ -1,0 +1,40 @@
+// COLOR-VARS
+$light-silver: #efeee9;
+$beige: #eeebdf;
+$main: #455a64;
+$black-blue: #373e42;
+$blue: #38c6b1;
+$white: rgba(#fff, .9);
+
+// SINGULARITY GRID
+//@import "../../node_modules/singularitygs/stylesheets/singularitygs.scss";
+
+//SPRITES
+@import "sprite/**/*.scss";
+
+//MIXIN
+@import "mixins/**/*.scss";
+
+//LAYOUT
+@import "layout/**/*.scss";
+
+//SECTIONS
+@import "blocks/**/*.scss";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

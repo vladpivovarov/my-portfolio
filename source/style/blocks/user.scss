@@ -1,0 +1,23 @@
+.user {
+  max-width: 380px;
+}
+
+.user__photo {
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.user__name {
+  text-align: center;
+  @include font-roboto(Medium);
+  font-size: 35px;
+  color: rgba(#fff, .9);
+}
+
+.user__desc {
+  text-align: center;
+  @include font-roboto(Light);
+  font-size: 16px;
+  color: rgba(#fff, .5);
+}

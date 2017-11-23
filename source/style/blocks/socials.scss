@@ -1,0 +1,18 @@
+.socials__item {
+  @include inline-block(middle);
+  margin-left: 20px;
+}
+
+.socials__link {
+  display: block;
+  width: 30px;
+  height: 20px;
+}
+
+.socials__svg {
+  fill: rgba(#fff, .5);
+  &:hover {
+    fill: rgba(#fff, .9);
+  }
+}
+

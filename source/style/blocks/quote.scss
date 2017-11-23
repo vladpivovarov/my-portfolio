@@ -1,0 +1,56 @@
+.quote {
+  position: relative;
+  @include inline-block(middle);
+  max-width: 370px;
+  margin-right: 35px;
+  padding-top: 50px;
+  text-align: left;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: block;
+    width: 33px;
+    height: 29px;
+    background-image: url(../img/quote.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.quote__text {
+  margin-bottom: 25px;
+  font-size: 16px;
+  @include font-roboto(Regular);
+}
+
+.quote__author-photo {
+  @include inline-block(middle);
+  width: 77px;
+  height: 77px;
+  margin-right: 20px;
+}
+
+.author-photo__img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.quote__author-title {
+  @include inline-block(middle);
+  color: $blue;
+}
+
+.author-title__name {
+  margin-bottom: 2px;
+  font-size: 16px;
+  @include font-roboto(Bold);
+}
+
+.author-title__prof {
+  font-size: 16px;
+  @include font-roboto(Regular);
+}

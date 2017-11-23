@@ -1,0 +1,24 @@
+$fonts-roboto: "Bold", "BoldItalic", "Italic", "Light", "LightItalic", "Medium", "MediumItalic", "Regular";
+
+$fonts-bernier: "Distressed-Regular", "Regular-Regular", "Shade-Regular";
+
+@each $font in $fonts-roboto {
+  @font-face {
+    font-family: "Roboto-#{$font}";
+    src: url('../fonts/Roboto-#{$font}.ttf') format('truetype');
+  }
+}
+
+@each $font in $fonts-bernier {
+  @font-face {
+    font-family: "BERNIER#{$font}";
+    src: url('../fonts/BERNIER#{$font}.otf') format("opentype");
+  }
+}
+
+@font-face {
+  font-family: "font-awesome";
+  src: url('../fonts/fontawesome-webfont.ttf') format ('truetype');
+}
+
+

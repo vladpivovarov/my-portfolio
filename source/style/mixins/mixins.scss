@@ -1,0 +1,63 @@
+@mixin inline-block($align) {
+  display: inline-block;
+  vertical-align: $align;
+}
+
+@mixin font-roboto($style) {
+  font-family: "Roboto-#{$style}";
+}
+
+@mixin font-bernier($style) {
+  font-family: "BERNIER#{$style}-Regular";
+}
+
+@mixin centered($axis) {
+  position: absolute;
+  @if $axis == both {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @if $axis == x {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @if $axis == y {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+%clearfix {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+// Adaptive breakpoints
+
+@mixin desktop {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}

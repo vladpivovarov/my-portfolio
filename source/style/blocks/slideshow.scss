@@ -1,0 +1,64 @@
+
+.slideshow {
+  height: 100%;
+  width: 100%;
+}
+
+.slideshow__main {
+  position: relative;
+  height: 70%;
+  width: 100%;
+}
+
+.slideshow__sub {
+  height: 30%;
+  @extend %clearfix;
+}
+
+.sub__left, .sub__right {
+  position: relative;
+  height: 100%;
+  width: 50%;
+}
+
+.sub__left {
+  float: left;
+  border-right: 1px solid rgba(#fff, .3);
+}
+
+.sub__right {
+  float: right;
+}
+
+.main__slide{
+  @include centered(both);
+  max-width: 90%;
+  max-height:90%;
+}
+
+.left__slide, .right__slide {
+  @include centered(both);
+  max-width: 95%;
+  max-height: 95%;
+}
+
+.top-slide-up, .top-slide-down {
+  &:hover {
+    cursor: pointer;
+    background: rgba(#000, .5);
+    & .down-arrow__svg {
+      fill: #fff;
+    }
+  }
+}
+
+.top__arrow {
+  z-index: 3;
+}
+
+.up-arrow {
+
+  & .down-arrow__svg {
+    transform: rotate(180deg);
+  }
+}

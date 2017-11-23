@@ -1,0 +1,31 @@
+extends ../_template
+
+block variables
+	- var title = 'Home page'
+
+block content
+	.hello
+		.hello__bg
+			img(src="assets/img/mountains.jpg", alt="").hello__bg-img
+		.user.hello__user
+			.user__photo
+				img(src="assets/img/my-photo-circle.png").hero-img
+			.user__name.user__name_hello
+				| Влад Пивоваров
+			.user__desc.user__desc_hello
+				| Личный сайт веб разработчика
+			ul.socials.hello__socials
+				each item in ["vk", "github", "in"]
+					li.socials__item
+						a(href="about.html").socials__link
+							svg(class=`svg socials__svg socials__svg_hello socials__svg_${item}`)
+								use(xlink:href=`assets/img/sprite.svg#${item}`)
+			.hello__menu
+				ul.hello__menu-list
+					- for(var i = 0; i < 3; i++)
+						li.hello__menu-item
+							a(href=`${menuHello.link[i]}`).hello__menu-link= menuHello.title[i]
+		a(href="/").auth-button.hello__auth-button Авторизоваться
+		.copyright.hello__copyright
+			p.copyright__text= footer.right
+

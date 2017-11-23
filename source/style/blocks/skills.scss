@@ -1,0 +1,52 @@
+
+.skills__block {
+  margin-bottom: 35px;
+}
+
+.skills__title {
+  margin-bottom: 16px;
+  font-size: 28px;
+  @include font-roboto(Medium);
+}
+
+.skill {
+  position: relative;
+  @include inline-block(middle);
+  margin-right: 37px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+.skill__name {
+  @include centered(both);
+  font-size: 12.8px;
+  @include font-roboto(Medium);
+  color: $blue;
+}
+
+.skill__circle {
+  width: 110px;
+  height: 110px;
+  fill: none;
+  stroke-width: 20px;
+
+  &:hover .skill__circle-two{
+    stroke-dasharray: 40, 282.2;
+  }
+}
+
+.skill__circle-one {
+  stroke: #dfdcd5;
+
+}
+
+.skill__circle-two {
+  transform-origin: 50% 50%;
+  transform: rotate(-90deg);
+  stroke: $blue;
+  stroke-dasharray: 0, 6358.5;
+  transition: all 1s;
+}
+

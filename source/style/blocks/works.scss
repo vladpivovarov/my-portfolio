@@ -1,0 +1,38 @@
+.works__title-top {
+  width: 100%;
+
+  @extend %clearfix;
+}
+
+.title-top__left, .title-top__right {
+  position: relative;
+  width: 50%;
+}
+
+.title-top__left {
+  float: left;
+}
+
+.title-top__right {
+  float: right;
+}
+
+.works__triangle {
+  position: absolute;
+  bottom: 100%;
+  fill: #faf8f0;
+}
+
+.works__title-body {
+  background: #faf8f0;
+  text-align: center;
+}
+
+.works__section-title {
+  margin-top: -15px;
+}
+
+.works__sites {
+  height: 750px;
+}
+

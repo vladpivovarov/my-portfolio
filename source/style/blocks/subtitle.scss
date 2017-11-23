@@ -1,0 +1,28 @@
+.subtitle {
+  position: relative;
+  @include inline-block(middle);
+  max-width: 380px;
+  padding: 0px 65px;
+  text-align: center;
+  font-size: 35px;
+  line-height: 1.2;
+  @include font-bernier(Regular);
+
+  &:after {
+    content: "";
+    @include centered(y);
+    left: 25px;
+    width: 20px;
+    height: 5px;
+    background-color: rgba(#343434, .2);
+  }
+
+  &:before {
+    content: "";
+    @include centered(y);
+    right: 25px;
+    width: 20px;
+    height: 5px;
+    background-color: rgba(#343434, .2);
+  }
+}

@@ -1,0 +1,55 @@
+.hero {
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.hero__bg-img {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.hero__socials {
+  position: absolute;
+  top: 25px;
+  left: 8px;
+}
+
+.hero__hamburger {
+  position: absolute;
+  top: 25px;
+  right: 27px;
+}
+
+.hero__title {
+  width: 100%;
+  text-align: center;
+  @include centered(y);
+}
+
+.section-title {
+  @include inline-block(middle);
+  max-width: 100%;
+}
+
+.hero__user-block {
+  @include centered(both);
+}
+
+.hero-img {
+  @include inline-block(middle);
+}
+
+.hero__down-arrow {
+  @include centered(x);
+  z-index: 2;
+  bottom: 72px;
+}

@@ -1,0 +1,59 @@
+.site {
+  text-align: center;
+}
+
+.site__subtitle {
+  margin-bottom: 25px;
+}
+
+.site__tehnology {
+  margin-bottom: 40px;
+  padding: 15px 0px;
+  border-top: 1px solid $blue;
+  border-bottom: 1px solid $blue;
+  font-size: 16px;
+  @include font-roboto(Medium);
+  text-align: center;
+  color: $blue;
+}
+
+.site__link {
+  position: relative;
+  @include inline-block(middle);
+  padding: 10px 15px;
+  border: 1px solid $blue;
+  border-radius: 3px;
+  text-align: center;
+  background: $blue;
+  color: $white;
+  transition: all .5s;
+
+  &:hover {
+    background: $white;
+    color: $blue;
+    border: 1px solid $blue;
+
+    & .link-svg {
+      fill: $blue;
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.site__link-icon {
+  @include inline-block(middle);
+  width: 22px;
+  height: 22px;
+  margin-right: 5px;
+}
+
+.link-svg {
+  fill: #fff;
+  transition: all .5s;
+}
+
+.site__link-text {
+  @include inline-block(middle);
+  font-size: 16px;
+  @include font-roboto(Medium);
+}

@@ -1,0 +1,83 @@
+.about {
+  @extend %clearfix;
+}
+
+.about__left, .about__right {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 850px;
+}
+
+.about__left {
+  background-color: $light-silver;
+  text-align: center;
+}
+
+.about__right {
+  background-color: $beige;
+}
+
+.about__triangle {
+  position: absolute;
+  bottom: 100%;
+  display: block;
+  z-index: 1;
+}
+
+.about__section-title {
+  margin-top: -50px;
+}
+
+.about-user {
+  padding-bottom: 28px;
+}
+
+.about-user__picture {
+  margin-bottom: 31px;
+}
+
+.about-img {
+  max-width: 100%;
+  @include inline-block(middle);
+}
+
+.about-user__title {
+  margin-bottom: 24px;
+}
+
+.about-user__text {
+  @include inline-block(middle);
+  max-width: 443px;
+  text-align: left;
+
+  & p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    @include font-roboto(Regular);
+    color: $main;
+  }
+}
+
+
+.about-data {
+  padding-left: 37px;
+  padding-right: 10px;
+}
+
+.about-data__description {
+  margin-bottom: 42px;
+  text-align: center;
+}
+
+.about-data__title {
+  margin-bottom: 32px;
+}
+
+.about-data__text {
+  text-align: left;
+  @include font-roboto(Regular);
+  font-size: 16px;
+  color: $main;
+}
+
