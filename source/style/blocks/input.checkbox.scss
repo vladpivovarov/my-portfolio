@@ -1,0 +1,32 @@
+.checkbox__svg {
+  display: none;
+  fill: $white;
+}
+
+.checkbox__box {
+  @include inline-block(middle);
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  padding: 4px;
+  border-radius: 3px;
+  background-color: $blue;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  left: -1000px;
+
+  &:checked {
+    & + .checkbox__box {
+      & .checkbox__svg {
+        display: block;
+      }
+    }
+  }
+}
+
+.checkbox__text {
+  @include inline-block(middle);
+  cursor: pointer;
+}

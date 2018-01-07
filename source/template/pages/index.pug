@@ -6,7 +6,6 @@ block variables
 block content
 	.hello
 		.hello__bg
-			img(src="assets/img/mountains.jpg", alt="").hello__bg-img
 		.user.hello__user
 			.user__photo
 				img(src="assets/img/my-photo-circle.png").hero-img
@@ -25,6 +24,43 @@ block content
 					- for(var i = 0; i < 3; i++)
 						li.hello__menu-item
 							a(href=`${menuHello.link[i]}`).hello__menu-link= menuHello.title[i]
+
+		//.autorization.hello__autorization
+		//	.autorization__subtitle
+		//		.subtitle Авторизируйтесь
+		//	.autorization__body
+		//		.input.autorization__input
+		//			.input__before
+		//				svg.input__svg
+		//					use(xlink:href="assets/img/sprite.svg#login")
+		//			input(type="text" placeholder="Логин").input_login
+		//		.input.autorization__input
+		//			.input__before
+		//				svg.input__svg
+		//					use(xlink:href="assets/img/sprite.svg#password")
+		//			input(type="password" placeholder="Пароль").input_password
+		//		label.checkbox.autorization__checkbox
+		//			input(type="checkbox" value="val" checked).checkbox__input
+		//			.checkbox__box
+		//				svg.checkbox__svg
+		//					use(xlink:href="assets/img/sprite.svg#check")
+		//			span.checkbox__text Я человек
+		//		.autorization__radio
+		//			.radio__title Вы точно не робот?
+		//			label.radio.autorization__radio__item
+		//				input(type="radio" name="robot" value="true").input__radio
+		//				.radio__box
+		//				.radio__text Да
+		//			label.radio.autorization__radio__item
+		//				input(type="radio" name="robot" value="false").input__radio
+		//				.radio__box
+		//				.radio__text Не уверен
+		//	.hello__menu
+		//		ul.hello__menu-list
+		//			- for(var i = 0; i < 2; i++)
+		//				li.hello__menu-item
+		//					a(href=`${menuAutorization.link[i]}`).hello__menu-link= menuAutorization.title[i]
+
 		a(href="/").auth-button.hello__auth-button Авторизоваться
 		.copyright.hello__copyright
 			p.copyright__text= footer.right

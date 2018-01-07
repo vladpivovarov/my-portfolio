@@ -1,0 +1,32 @@
+.autorization {
+  max-width: 380px;
+  border-radius: 5px 5px 0 0;
+  background: rgba(#fff, .7);
+  text-align: center;
+}
+
+.autorization__subtitle {
+  padding: 40px 0;
+}
+
+.autorization__body	{
+  padding: 0px 20px 40px 20px;
+}
+
+.autorization__input {
+  margin-bottom: 20px;
+}
+
+.autorization__checkbox {
+  @include inline-block(middle);
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.autorization__radio__item {
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+}

@@ -20,21 +20,20 @@ $.path.task.forEach(function(taskPath) {
   require(taskPath)();
 });
 
-$.gulp.task('default', $.gulp.series(
-  'clean',
-  $.gulp.parallel(
-    'sass',
-    'pug',
-    'js:foundation',
-    'js:process',
-    'copy:image',
-    'copy:font',
-    'css:foundation',
-    'sprite:svg',
-    'sprite:png'
-  ),
-  $.gulp.parallel(
-    'watch',
-    'serve'
-  )
-));
+$.gulp.task("default", $.gulp.series(
+    "clean",
+    $.gulp.parallel(
+        "sass",
+        "pug",
+        "copy:image",
+        "css:foundation",
+        "copy:font",
+        "js:foundation",
+        "js:process",
+        "sprite:png",
+        "sprite:svg"
+    ), $.gulp.parallel(
+        "watch",
+        "serve"
+    )
+))

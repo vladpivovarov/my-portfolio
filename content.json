@@ -1,4 +1,9 @@
 {
+  "socialsLink": {
+    "vk": "https://vk.com/vladislavpivovarov",
+    "github": "https://github.com/vladpivovarov",
+    "in": "https://www.linkedin.com/in/%D0%B2%D0%BB%D0%B0%D0%B4%D0%B8%D1%81%D0%BB%D0%B0%D0%B2-%D0%BF%D0%B8%D0%B2%D0%BE%D0%B2%D0%B0%D1%80%D0%BE%D0%B2-4181a9156/"
+  },
   "skills": [
     {
       "Frontend": [
@@ -58,7 +63,7 @@
   },
   "footer": {
     "left": "Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. ",
-    "right": "© Владислав Пивоваров | создано с любовью | 2017"
+    "right": "© Владислав Пивоваров | создано с любовью | 2018"
   },
   "menuHello": {
     "title": [
@@ -70,6 +75,16 @@
       "href1",
       "href2",
       "href3"
+    ]
+  },
+  "menuAutorization": {
+    "title": [
+      "На главную",
+      "Войти"
+    ],
+    "link": [
+      "href1",
+      "href2"
     ]
   },
   "quotes": [

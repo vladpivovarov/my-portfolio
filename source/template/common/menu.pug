@@ -1,0 +1,8 @@
+
+nav.menu
+	a(href="./").close
+	ul.menu__list
+		- for (var i=0; i<menu.title.length; i++)
+			li.menu__item
+				.menu__item__block
+					a(href=`${menu.link[i]}`).menu__link.title= menu.title[i]

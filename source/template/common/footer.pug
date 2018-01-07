@@ -1,0 +1,19 @@
+footer.footer
+	.footer__row
+		.footer__left
+			ul.footer-menu__list
+				- for(var i = 0; i < 4; i++)
+					li.footer-menu__item
+						a(href=`${menu.link[i]}`).footer-menu__link= menu.title[i]
+		.footer__right
+			ul.footer__socials-list.socials
+				each item in ["vk", "github", "in"]
+					li.socials__item
+						a(href=`${socialsLink[item]}` target="_blank").socials__link.socials__link_footer
+							svg(class=`svg socials__svg socials__svg_${item} socials__svg_footer` viewbox="0 0 100 100")
+								use(xlink:href=`assets/img/sprite.svg#${item}`)
+	.footer__row
+		.footer__left
+			p= footer.left
+		.footer__right
+			p= footer.right

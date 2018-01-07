@@ -15,28 +15,18 @@
   right: 0;
   left: 0;
   bottom: 0;
+  background: url(../img/mountains.png);
+  background-size: cover;
 }
 
-.hello__bg-img {
-  min-width: 100%;
-  min-height: 100%;
-}
 
 .hello__user {
   @include centered(both);
-  padding: 40px 40px;
-  background: rgba(#fff, .7);
-  border-radius: 5px 5px 0 0;
+  background-color: rgba(#fff, .8);
 }
 
-.user__name_hello {
-  color: $main !important;
-  line-height: 1.2;
-}
-
-.user__desc_hello {
-  margin-bottom: 35px;
-  color: $main !important;
+.hello__autorization {
+  @include centered(both);
 }
 
 .hello__socials {

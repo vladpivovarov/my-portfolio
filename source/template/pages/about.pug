@@ -1,22 +1,16 @@
 extends ../_template
 
 block variables
-	- var title = 'About page'
+	- var title = "About page"
 
 block content
 		section.section.hero
 			.hero__bg
-				img(src="assets/img/mountains.jpg", alt="").hero__bg-img
-			ul.hero__socials.socials
-				each item in ["vk", "github", "in"]
-					li.socials__item
-						a(href="").socials__link
-							svg(class=`svg socials__svg socials__svg_${item}`)
-								use(xlink:href=`assets/img/sprite.svg#${item}`)
-			a(href="").hero__hamburger.hamburger
+			include ../common/socialsUp
+			a(href="./").hero__hamburger.hamburger
 				svg.svg.hamburger__svg
 					use(xlink:href="assets/img/sprite.svg#hamburger")
-			a(href="").hero__down-arrow.down-arrow
+			a(href="./").hero__down-arrow.down-arrow
 				svg.svg.down-arrow__svg
 					use(xlink:href="assets/img/sprite.svg#arrow_down")
 			.hero__title
@@ -36,8 +30,9 @@ block content
 				.about-user
 					.about-user__picture
 						img(src="./assets/img/my-photo.png").about-img
-					.subtitle.about-user__title
-						|Кто я
+					.about-user__title
+						.subtitle
+							| Кто я
 					.about-user__text
 						p= about.who1
 						p= about.who2
@@ -73,25 +68,7 @@ block content
 								svg.contact-svg
 									use(xlink:href=`assets/img/sprite.svg#${contacts.icon[i]}`)
 								.contact-info= contacts.contact[i]
-			footer.footer.map__footer
-				.footer__row
-					.footer__left
-						ul.footer-menu__list
-							- for(var i = 0; i < 4; i++)
-								li.footer-menu__item
-									a(href=`${menu.link[i]}`).footer-menu__link= menu.title[i]
-					.footer__right
-						ul.footer__socials-list.socials
-							each item in ["vk", "github", "in"]
-								li.socials__item
-									a(href="").socials__link.socials__link_footer
-										svg(class=`svg socials__svg socials__svg_${item} socials__svg_footer` viewbox="0 0 100 100")
-											use(xlink:href=`assets/img/sprite.svg#${item}`)
-				.footer__row
-					.footer__left
-						p= footer.left
-					.footer__right
-						p= footer.right
 
+			include ../common/footer
 
 

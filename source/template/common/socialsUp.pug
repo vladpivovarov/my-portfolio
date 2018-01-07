@@ -1,0 +1,6 @@
+ul.hero__socials.socials
+	each item in ["vk", "github", "in"]
+		li.socials__item
+			a(href=`${socialsLink[item]}` target="_blank").socials__link
+				svg(class=`svg socials__svg socials__svg_${item}`)
+					use(xlink:href=`assets/img/sprite.svg#${item}`)

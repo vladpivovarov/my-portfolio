@@ -37,27 +37,33 @@
 }
 
 // Adaptive breakpoints
-
 @mixin desktop {
-  @media screen and (max-width: 1200px) {
+  @media (max-width: 1200px) and (min-width: 1201px) {
     @content;
   }
 }
 
 @mixin laptop {
-  @media screen and (max-width: 992px) {
+  @media (max-width: 992px) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     @content;
   }
 }
 
-@mixin mobile {
-  @media screen and (max-width: 480px) {
+@mixin phone {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
     @content;
   }
 }

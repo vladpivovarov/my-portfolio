@@ -10,11 +10,8 @@
   right: 0;
   left: 0;
   bottom: 0;
-}
-
-.hero__bg-img {
-  min-width: 100%;
-  min-height: 100%;
+  background: url(../img/mountains.png);
+  background-size: cover;
 }
 
 .hero__socials {
@@ -42,6 +39,9 @@
 
 .hero__user-block {
   @include centered(both);
+  & .user__desc, .user__name {
+    color: $white;
+  }
 }
 
 .hero-img {
